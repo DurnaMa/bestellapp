@@ -19,13 +19,18 @@
         <link rel="stylesheet" href="./css/overlayMenu.css" />
         <link rel="stylesheet" href="./css/fonts.css" />
     </head>
-    <body>
+    <body onload="init()">
         <include-html src="./templates/header.html"></include-html>
 
         <main>
-            <section>
-                <div class="dish" id="dish">
-
+            <section class="menu1">
+                <div class="menu-container" id="dish">
+                    <h2>Speisekarte</h2>
+                    <div id="menu"></div>
+                </div>
+                <div class="basket-container">
+                    <h2>Einkaufswagen</h2>
+                    <div id="shoppingBasket"></div>
                 </div>
             </section>
         </main>

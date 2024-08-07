@@ -1,12 +1,19 @@
 function init(){
     renderMenu();
+    renderShoppingBasket();
 }
 
 function renderMenu() {
-    let contentRef = document.getElementById("dish");
-    contentRef.innerHTML = " ";
+    let menuContainer = document.getElementById('menu');
+    menuContainer.innerHTML = menu.map(category => getMenuCategoryTemplate(category)).join('');
+}
 
-    // for (let indexMenu = 0; indexMenu < notes.length; indexMenu++) {
-    //     contentRef.innerHTML += getMenuTemplate(indexMenu);
-    // };
-};
+function renderShoppingBasket() {
+    let basketContainer = document.getElementById('shoppingBasket');
+    basketContainer.textContent = 'Der Einkaufswagen ist leer.';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderMenu();
+    renderShoppingBasket();
+});
